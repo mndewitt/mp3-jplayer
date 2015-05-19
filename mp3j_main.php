@@ -650,8 +650,9 @@ if ( !class_exists("MP3j_Main") ) { class MP3j_Main	{
 		}
 	//jplayer and plugin js
 		//wp_enqueue_script( 'jquery.jplayer.min', $this->PluginFolder . '/js/jquery.jplayer.min2-6-0.js', false, '2.6.0' );
-		wp_enqueue_script( 'jplayer271', $this->PluginFolder . '/js/jquery.jplayer.min.2.7.1.js', false, '2.7.1' );
-		wp_enqueue_script( 'mp3-jplayer', $this->PluginFolder . '/js/mp3-jplayer-1.8.9.js', false, '1.8.9' );
+		//jplayer and plugin js
+		wp_enqueue_script( 'jplayer271', $this->PluginFolder . '/js/jquery.jplayer.min.2.7.1.js', array('jquery', 'jquery-ui-core'), '2.7.1' );
+		wp_enqueue_script( 'mp3-jplayer', $this->PluginFolder . '/js/mp3-jplayer-2.3.2.js', array('jquery', 'jquery-ui-core'), '2.3.2' );
 	//css
 		if ( $theme == "styleF" ) { $themepath = $this->PluginFolder . "/css/players-1-8-silver.css"; }
 		elseif ( $theme == "styleG" ) { $themepath = $this->PluginFolder . "/css/players-1-8-dark.css"; }
